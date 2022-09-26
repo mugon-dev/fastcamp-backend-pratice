@@ -17,15 +17,15 @@ public class UserDaoTest {
     void setUp() {
         ResourceDatabasePopulator populator = new ResourceDatabasePopulator();
         populator.addScript(new ClassPathResource("db_schema.sql"));
-        DatabasePopulatorUtils.execute(populator,ConnectionManager.getDataSource());
+        DatabasePopulatorUtils.execute(populator, ConnectionManager.getDataSource());
     }
 
     @Test
-    void createTest() throws SQLException {
+    void namecreateTest() throws SQLException {
         UserDao userDao = new UserDao();
-        userDao.create(new User("wizard", "password", "name","email"));
+        userDao.create(new User("wizard", "password", "name", "email"));
 
         User user = userDao.findByUserId("wizard");
-        assertThat(user).isEqualTo(new User("wizard", "password", "name","email"));
-      }
+        assertThat(user).isEqualTo(new User("wizard", "password", "name", "email"));
+    }
 }
