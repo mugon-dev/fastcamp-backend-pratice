@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 import org.example.mvc.Controller.Controller;
 import org.example.mvc.Controller.ForwardController;
-import org.example.mvc.Controller.HomeController;
 import org.example.mvc.Controller.RequestMethod;
 import org.example.mvc.Controller.UserCreateController;
 import org.example.mvc.Controller.UserListController;
@@ -16,7 +15,8 @@ public class RequestMappingHandlerMapping implements HandlerMapping {
 
     // 어떠한 경로도 설정하지 않으면
     void init() {
-        mappings.put(new HandlerKey(RequestMethod.GET, "/"), new HomeController());
+        // annotation 기반으로 변경
+//        mappings.put(new HandlerKey(RequestMethod.GET, "/"), new HomeController());
         mappings.put(new HandlerKey(RequestMethod.GET, "/users"), new UserListController());
         mappings.put(new HandlerKey(RequestMethod.POST, "/users"), new UserCreateController());
         mappings.put(new HandlerKey(RequestMethod.GET, "/user/form"),
