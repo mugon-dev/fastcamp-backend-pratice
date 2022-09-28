@@ -6,6 +6,7 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/custom-mvc" />
+    <file type="web" url="file://$PROJECT_DIR$/di-practice" />
     <file type="web" url="file://$PROJECT_DIR$/jdbc-pratice" />
     <file type="web" url="file://$PROJECT_DIR$/mvc-pratice" />
     <file type="web" url="file://$PROJECT_DIR$/oop-pratice" />
